@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "GothamPro";
+    src: url("./fonts/gothampro.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Lato";
+    src: url("./fonts/Lato-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/*анимация*/
+@keyframes pulsate0 {
+    0% {
+       transform: scale(0.9);
+       opacity: 1;
+    }
+    50% {
+       opacity: 0.9;
+    }
+    100% {
+       transform: scale(1);
+       opacity: 1;
+    }
+ }
+
+
+@keyframes pulsate1 {
+    0% {
+       transform: scale(0.9);
+       opacity: 0;
+    }
+    50% {
+       opacity: 1;
+    }
+    100% {
+       transform: scale(1.4);
+       opacity: 0;
+    }
+ }
+
+ @keyframes pulsate2 {
+    0% {
+       transform: scale(0.5);
+       opacity: 0;
+    }
+    50% {
+       opacity: 1;
+    }
+    100% {
+       transform: scale(1.2);
+       opacity: 0;
+    }
+ }

@@ -1,0 +1,485 @@
+/*Первый слайд*/
+html {
+    scroll-behavior: smooth;
+    cursor: pointer;
+    overflow-y: hidden;
+}
+
+body {
+    margin: 0;
+    max-width: 1024px;
+    /*overflow-x: hidden*/
+
+}
+
+
+.fistSlide {
+    background: url('./image/firstSlide/background.jpg');
+    margin-top: 0;
+    margin-left: 0;
+    top: 0;
+    left: 0;
+    width: 1024px;
+    height: 768px;
+    background-size: cover;
+    position: relative;
+
+}
+
+.headerOne {
+    margin-top: 0;
+    padding-top: 144.5px;
+    padding-left: 73.5px;
+    font-family: "GothamPro";
+    font-size: 50px;
+    font-weight: normal;
+    color: #0d319c;
+}
+
+.goal1 {
+    width: 52.5px;
+    height: 52.5px;
+    left: 588.5px;
+
+    position: absolute;
+}
+
+.goal1 img {
+    position: absolute;
+}
+.one1{
+    animation: pulsate0 infinite 0.8s;
+    animation-delay: 0.3s;
+    top: -26.25px;
+    left: -26.25px;
+}
+
+.two1{
+    animation: pulsate1 infinite 0.8s;
+    animation-delay: 0.2s;
+    top: -20px;
+    left: -20px;
+    
+
+}
+.three1{
+        animation: pulsate2 infinite 0.8s;
+        top: -8.5px;
+        left: -8.5px;
+
+        
+}
+
+.goal1 h2 {
+    width: 284px;
+    left: 52px;
+    top: -30px;
+    font-family: "Lato";
+    font-size: 20px;
+    font-weight: normal;
+    color: #0d319c;
+    position: absolute;
+}
+
+.goal2 {
+    width: 27px;
+    height: 27px;
+    left: 288px;
+    top: 441.5px;
+
+    position: absolute;
+}
+
+.goal2 img {
+    position: absolute;
+}
+.one2{
+    animation: pulsate0 infinite 0.8s;
+    animation-delay: 0.3s;
+    top: -13.5px;
+    left: -13.5px;
+}
+.two2{
+    animation: pulsate1 infinite 0.8s;
+    animation-delay: 0.2s;
+    top: -10px;
+    left: -10px;
+    
+
+}
+.three2{
+        animation: pulsate2 infinite 0.8s;
+        top: -5.5px;
+        left: -5.5px;
+
+}
+
+.goal2 h2 {
+    bottom: 30px;
+    font-family: "Lato";
+    font-size: 20px;
+    font-weight: normal;
+    color: #0d319c;
+    position: absolute;
+    transform: translate(-50%);
+}
+
+.goal3 {
+    width: 15px;
+    height: 15px;
+    left: 831px;
+    top: 525.5px;
+
+    position: absolute;
+}
+
+.goal3 img {
+    position: absolute;
+}
+.one3{
+    animation: pulsate0 infinite 0.8s;
+    animation-delay: 0.3s;
+    top: -7.65px;
+    left: -7.65px;
+}
+.two3{
+    animation: pulsate1 infinite 0.8s;
+    animation-delay: 0.2s;
+    top: -4.6px;
+    left: -4.6px;
+    
+
+}
+.three3{
+        animation: pulsate2 infinite 0.8s;
+        top: -2.55px;
+        left: -2.55px;
+
+}
+
+.goal3 h2 {
+    width: 86px;
+    bottom: 15px;
+    font-family: "Lato";
+    font-size: 20px;
+    font-weight: normal;
+    color: #0d319c;
+    position: absolute;
+    transform: translate(-50%);
+
+}
+
+.goal4 {
+    width: 15px;
+    height: 15px;
+    left: 487.5px;
+    top: 547px;
+
+    position: absolute;
+}
+
+.goal4 img {
+    position: absolute;
+}
+
+.goal4 h2 {
+    width: 155px;
+    left: -40px;
+    bottom: 15px;
+    font-family: "Lato";
+    font-size: 20px;
+    font-weight: normal;
+    color: #0d319c;
+    position: absolute;
+    transform: translate(-50%);
+
+}
+
+.pagination {
+    width: auto;
+    position: fixed;
+    top: 50%;
+    left: 1000px;
+}
+
+
+.bottom {
+
+    left: 50%;
+    bottom: 30px;
+    position: absolute;
+}
+
+.bottom img {
+    position: absolute;
+    transform: translate(-50%, -70%);
+}
+
+.bottom h2 {
+    width: 120px;
+    bottom: 10px;
+    font-family: "GothamPro";
+    font-size: 15px;
+    font-weight: normal;
+    color: #ffff;
+    position: absolute;
+    transform: translate(-50%);
+
+}
+
+.shape {
+    z-index: 1000;
+}
+
+/*Второй слайд*/
+
+.secondSlide {
+    background: url('./image/secondSlide/background2.jpg');
+    margin-top: 0;
+    margin-left: 0;
+    top: 0;
+    left: 0;
+    width: 1024px;
+    height: 768px;
+    background-size: cover;
+    position: relative;
+}
+
+.headerSecond {
+    margin-top: 0;
+    padding-top: 250px;
+    margin-left: auto;
+    font-family: "GothamPro";
+    text-align: center;
+    font-size: 50px;
+    font-weight: 100;
+    color: #ffff;
+}
+
+.ice1 {
+    top: 41px;
+    left: 888px;
+    position: absolute;
+}
+
+.ice2 {
+    top: 163px;
+    left: 87px;
+    position: absolute;
+}
+
+.ice3 {
+    top: 443px;
+    left: 236px;
+    position: absolute;
+}
+
+.ice4 {
+    top: 594px;
+    left: 724px;
+    position: absolute;
+}
+
+/*Третий слайд 1*/
+.inline {
+    display: inline-flex;
+}
+
+.thirdSlideOne {
+    background: url('./image/thirdSlide/background3.jpg');
+    left: 0;
+    width: 1024px;
+    height: 768px;
+    background-size: cover;
+    position: relative;
+}
+
+.headerThird {
+    margin-top: 0;
+    padding-top: 118px;
+    padding-left: 86px;
+    font-family: "GothamPro";
+    font-size: 30px;
+    font-weight: 100;
+    color: #ffff;
+}
+
+.thirdIce1 {
+    top: 550px;
+    left: 32px;
+    position: absolute;
+    opacity: 50%;
+
+}
+
+.thirdIce2 {
+    top: 114px;
+    left: 915px;
+    position: absolute;
+    opacity: 50%;
+
+}
+
+.thirdIce3 {
+    top: 232px;
+    left: 672px;
+    position: absolute;
+    opacity: 50%;
+
+}
+
+.scheme {
+    top: 207px;
+    left: 245px;
+    position: absolute;
+}
+
+.slider {
+    width: 660px;
+    height: 12px;
+    top: 660px;
+    left: 197px;
+    z-index: 999999999;
+    position: absolute;
+
+}
+
+.scroll {
+    width: 640px;
+    height: 12px;
+    top: 1422px;
+    left: 200px;
+    background-color: #435063;
+    opacity: 50%;
+    position: absolute;
+    z-index: 9999999999999;
+}
+
+.polygon {
+    width: 40px;
+    transform: translate(0, -40%);
+    position: absolute;
+}
+
+/*Третий слайд 2*/
+
+.thirdSlideTwo {
+
+    background: url('./image/thirdSlideTwo/background32.jpg');
+    left: 0;
+    width: 1024px;
+    height: 768px;
+    background-size: cover;
+    position: relative;
+
+    background-size: cover;
+    position: relative;
+}
+
+.tab {
+    top: 160px;
+    left: 161px;
+    position: absolute;
+}
+
+.thirdIce12 {
+    top: 550px;
+    left: 908px;
+    position: absolute;
+    opacity: 50%;
+
+}
+
+.thirdIce22 {
+    top: 81px;
+    left: 480px;
+    position: absolute;
+    opacity: 50%;
+
+}
+
+.thirdIce32 {
+    top: 232px;
+    left: 51px;
+    position: absolute;
+    opacity: 50%;
+
+}
+
+/*Третий слайд 3*/
+
+
+
+.thirdSlideThree {
+    background: url('./image/thirdSlideTwo/background32.jpg');
+    left: 0;
+    width: 1024px;
+    height: 768px;
+    background-size: cover;
+    position: relative;
+}
+
+.tab2 {
+    top: 160px;
+    left: 50px;
+    position: absolute;
+}
+
+.thirdIce13 {
+    top: 560px;
+    left: 160px;
+    position: absolute;
+    opacity: 50%;
+
+}
+
+.thirdIce23 {
+    top: 112px;
+    position: absolute;
+    opacity: 50%;
+
+}
+
+.thirdIce33 {
+    top: 211px;
+    left: 937px;
+    position: absolute;
+    opacity: 50%;
+
+}
+
+/*Кнопки прокрутки*/
+.circleOn {
+    background-color: #f78b1f;
+}
+
+.circleOff {
+    background-color: #ffff;
+}
+
+.oneButtom {
+    width: 13px;
+    height: 13px;
+    border-radius: 10px;
+    z-index: 10000;
+    margin-bottom: 5px;
+}
+
+.twoButtom {
+    width: 13px;
+    height: 13px;
+    border-radius: 10px;
+    z-index: 10000;
+    margin-bottom: 5px;
+}
+
+.freeButtom {
+    width: 13px;
+    height: 13px;
+    border-radius: 10px;
+    z-index: 10000;
+    margin-bottom: 5px;
+}
+
+
+
