@@ -1,3 +1,4 @@
+
 let fistSlide = document.querySelector('.fistSlide');
 let secondSlide = document.querySelector('.secondSlide');
 let thirdSlideOne = document.querySelector('.thirdSlideOne');
@@ -11,88 +12,50 @@ let twoButtom = document.querySelector('.twoButtom');
 let freeButtom = document.querySelector('.freeButtom');
 
 
-
-thirdSlideThree.style.display = "none";
-thirdSlideTwo.style.display = "none";
-
-//Первый слайд
-fistSlide.addEventListener("pointerdown", function (event) {
+document.addEventListener("pointerdown", function (event) {
     event.preventDefault();
     let pressing = event.clientY;
-    document.addEventListener("pointermove", onMouseMove);
 
+    document.addEventListener("pointermove", onMouseMove);
+    console.log(event.target);
     function onMouseMove(event) {
         let spend = event.clientY
         if (pressing - spend > 30) {
-
-            oneButtom.classList.add("circleOff")
-            oneButtom.classList.remove("circleOn")
-            twoButtom.classList.add("circleOn")
-            twoButtom.classList.remove("circleOff")
-
-
-            secondSlide.scrollIntoView()
-
-        }
-    };
-    document.addEventListener("pointerup", function () {
-        document.removeEventListener("pointermove", onMouseMove);
-    })
-});
-//Второй слайд
-secondSlide.addEventListener("pointerdown", function (event) {
-    event.preventDefault();
-    let pressing = event.clientY;
-    document.addEventListener("pointermove", onMouseMove);
-
-    function onMouseMove(event) {
-        let spend = event.clientY
-        if (pressing - spend > 30) {
-            twoButtom.classList.add("circleOff")
-            twoButtom.classList.remove("circleOn")
-            freeButtom.classList.add("circleOn")
-            freeButtom.classList.remove("circleOff")
-
-            inline.scrollIntoView(false)
+            if (event.pageY < 768) {
+                oneButtom.classList.remove("circleOn")
+                oneButtom.classList.add("circleOff")
+                twoButtom.classList.remove("circleOff")
+                twoButtom.classList.add("circleOn")
+            };
+            if (event.pageY > 768 && event.pageY < 1536) {
+                twoButtom.classList.remove("circleOn")
+                twoButtom.classList.add("circleOff")
+                freeButtom.classList.remove("circleOff")
+                freeButtom.classList.add("circleOn")
+            }
+            window.scrollBy(0, 768)
 
         } else if (spend - pressing > 30) {
-            oneButtom.classList.add("circleOn")
-            oneButtom.classList.remove("circleOff")
-            twoButtom.classList.add("circleOff")
-            twoButtom.classList.remove("circleOn")
-            fistSlide.scrollIntoView()
+            if (event.pageY > 1536) {
+                freeButtom.classList.remove("circleOn")
+                freeButtom.classList.add("circleOff")
+                twoButtom.classList.remove("circleOff")
+                twoButtom.classList.add("circleOn")
+                console.log(event.pageY < 768 == true);
+            };
+            if (event.pageY > 768 && event.pageY < 1536) {
+                twoButtom.classList.remove("circleOn")
+                twoButtom.classList.add("circleOff")
+                oneButtom.classList.remove("circleOff")
+                oneButtom.classList.add("circleOn")
+            }
+            window.scrollBy(0, -768)
         }
     };
     document.addEventListener("pointerup", function () {
         document.removeEventListener("pointermove", onMouseMove);
     })
 });
-//Третий слайд
-inline.addEventListener("pointerdown", function (event) {
-    event.preventDefault();
-    let pressing = event.clientY;
-    document.addEventListener("pointermove", onMouseMove);
-
-    function onMouseMove(event) {
-        let spend = event.clientY;
-        let size = spend - pressing
-        console.log(size);
-        if (spend - pressing > 30) {
-            twoButtom.classList.add("circleOn")
-            twoButtom.classList.remove("circleOff")
-            freeButtom.classList.add("circleOff")
-            freeButtom.classList.remove("circleOn")
-            secondSlide.scrollIntoView()
-        }
-    };
-    document.addEventListener("pointerup", function () {
-        document.removeEventListener("pointermove", onMouseMove);
-    })
-});
-
-
-
-
 
 //Третий слайд Прокрутка вправо влево
 
@@ -119,22 +82,14 @@ polygon.addEventListener("pointerdown", function (event) {
         position = spend
         polygon.style.left = spend + 'px';
 
-
         if (spend <= 200) {
-            thirdSlideOne.style.display = "block";
-            thirdSlideTwo.style.display = "none";
-            thirdSlideThree.style.display = "none";
-
+            inline.scrollLeft = 0
         }
         if (spend >= 200 && spend < 400) {
-            thirdSlideOne.style.display = "none";
-            thirdSlideTwo.style.display = "block";
-            thirdSlideThree.style.display = "none";
+           inline.scrollLeft = 1024
         }
         if (spend >= 400) {
-            thirdSlideOne.style.display = "none";
-            thirdSlideTwo.style.display = "none";
-            thirdSlideThree.style.display = "block";
+           inline.scrollLeft = 2048
         }
     };
     document.addEventListener("pointerup", function () {
